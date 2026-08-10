@@ -18,7 +18,6 @@
     slogan: "Connect. Lead. Build. Grow.",
     pillars: "Leadership • Business • Entrepreneurship • Connection",
     email: "gblu.global@gmail.com",
-    logo: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iIzBCMUYzQSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNGNUI5NDIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGcgc3Ryb2tlPSIjMTU1RUVGIiBzdHJva2Utd2lkdGg9IjEuMyIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC41NSI+CiAgICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1MCIgcng9IjQ2IiByeT0iMjAiLz4KICAgIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjUwIiByeD0iNDYiIHJ5PSIzNiIvPgogICAgPGxpbmUgeDE9IjQiIHkxPSI1MCIgeDI9Ijk2IiB5Mj0iNTAiLz4KICAgIDxsaW5lIHgxPSI1MCIgeTE9IjIiIHgyPSI1MCIgeTI9Ijk4Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNGNUI5NDIiPgogICAgPGNpcmNsZSBjeD0iMjYiIGN5PSIzNCIgcj0iMiIvPgogICAgPGNpcmNsZSBjeD0iNzIiIGN5PSIzMCIgcj0iMS42Ii8+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjYwIiByPSIxLjgiLz4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iNjYiIHI9IjEuNiIvPgogIDwvZz4KICA8dGV4dCB4PSI1MCIgeT0iNjMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjM4IiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HPC90ZXh0Pgo8L3N2Zz4K",
     founder: {
       name: "Dagmawi Tadesse",
       title: "Founder & CEO",
@@ -29,32 +28,6 @@
       linkedin: "https://www.linkedin.com/company/gblu-global/",
       facebook: "https://web.facebook.com/profile.php?id=61592775405959",
       telegram: "https://t.me/+Gxbru4C940NkM2E0"
-    },
-    joinUrl: "#join",          // no longer used directly - Join now opens the sign up/sign in modal
-    joinLive: false,            // unused now that auth is live; kept for backward compatibility
-
-    // ============================================================
-    // FIREBASE SETUP — REQUIRED for Join / Sign In to work
-    // ------------------------------------------------------------
-    // 1. Go to https://console.firebase.google.com -> Create project
-    // 2. Build > Authentication -> Get started -> enable "Email/Password"
-    // 3. Build > Firestore Database -> Create database (start in
-    //    production mode, pick a region close to your users)
-    // 4. Project settings (gear icon) > General > "Your apps" > Add app
-    //    > Web (</>) -> copy the firebaseConfig object it gives you
-    //    and paste the values below.
-    // 5. Authentication > Settings > Authorized domains -> add your
-    //    GitHub Pages domain, e.g. xinstore07.github.io
-    // Until this is filled in, the Join/Sign In buttons will show a
-    // friendly "not connected yet" message instead of breaking.
-    // ============================================================
-    firebase: {
-      apiKey: "",
-      authDomain: "",
-      projectId: "",
-      storageBucket: "",
-      messagingSenderId: "",
-      appId: ""
     },
 
     nav: [
@@ -67,11 +40,6 @@
     ]
   };
 </script>
-
-<!-- Firebase (compat build - works with plain <script> tags, no bundler needed) -->
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 
 <style>
   :root {
@@ -948,111 +916,34 @@
   }
   .auth-close:hover { background: var(--border); }
   .auth-header { text-align: center; margin-bottom: 22px; }
-  .auth-header img { height: 40px; margin: 0 auto 14px; }
   .auth-header h3 { font-size: 21px; margin-bottom: 4px; }
   .auth-header p { font-size: 13.5px; color: var(--text-muted); }
-  .auth-tabs {
-    display: flex;
-    background: var(--bg-light);
-    border-radius: 999px;
-    padding: 4px;
-    margin-bottom: 24px;
-  }
-  .auth-tab {
-    flex: 1;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 999px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-muted);
-    cursor: pointer;
-    border: none;
-    background: transparent;
-  }
-  .auth-tab.active { background: var(--white); color: var(--navy); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-  .auth-form { display: none; flex-direction: column; gap: 14px; }
-  .auth-form.active { display: flex; }
-  .field label {
-    display: block;
-    font-size: 12.5px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
-  }
-  .field input, .field select {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1.5px solid var(--border);
-    font-size: 14.5px;
-    font-family: var(--font);
-    color: var(--text);
-    background: var(--white);
-    transition: border-color 0.15s ease;
-  }
-  .field input:focus, .field select:focus { outline: none; border-color: var(--blue); }
-  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .auth-error {
-    display: none;
-    background: rgba(220,53,69,0.08);
-    color: #c0293f;
-    border: 1px solid rgba(220,53,69,0.25);
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .auth-error.show { display: block; }
-  .auth-note {
-    display: none;
-    background: rgba(21,94,239,0.06);
-    color: var(--navy);
-    border: 1px dashed rgba(21,94,239,0.3);
-    padding: 12px 14px;
-    border-radius: 10px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  .auth-note.show { display: block; }
-  .auth-submit { margin-top: 4px; width: 100%; }
-  .auth-submit[data-loading="true"] { opacity: 0.7; pointer-events: none; }
-  .auth-switch { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 6px; }
-  .auth-switch button { background: none; border: none; color: var(--blue); font-weight: 700; cursor: pointer; font-size: 13px; }
 
-  /* ---------- LOGGED-IN NAV STATE ---------- */
-  .user-chip {
+  /* ---------- JOIN LINKS ---------- */
+  .join-links { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+  .join-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.16);
-    padding: 6px 8px 6px 14px;
-    border-radius: 999px;
-  }
-  .user-chip .name { font-size: 13.5px; font-weight: 700; color: var(--white); }
-  .user-chip .avatar {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    background: var(--gold);
+    gap: 14px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 1.5px solid var(--border);
+    background: var(--bg-light);
     color: var(--navy);
-    font-size: 12px;
-    font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .user-chip .signout {
-    background: transparent;
-    border: none;
-    color: rgba(255,255,255,0.55);
-    font-size: 12px;
     font-weight: 700;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 999px;
+    font-size: 15px;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   }
-  .user-chip .signout:hover { color: var(--gold); background: rgba(255,255,255,0.08); }
+  .join-link:hover { transform: translateY(-2px); border-color: var(--blue); background: var(--white); }
+  .join-link .icon-circle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
 </style>
 </head>
 <body>
@@ -1061,7 +952,6 @@
 <header id="site-header">
   <div class="wrap nav-inner">
     <a href="#home" class="brand">
-      <img id="brand-logo" src="" alt="GBLU logo">
       <span class="brand-text">
         <span class="full" id="brand-full"></span>
         <span class="short" id="brand-short"></span>
@@ -1071,12 +961,7 @@
       <ul id="nav-list"></ul>
     </nav>
     <div class="nav-cta-wrap">
-      <button class="nav-cta" id="nav-cta" data-auth-trigger>Join GBLU</button>
-      <div class="user-chip" id="user-chip" style="display:none;">
-        <div class="avatar" id="user-avatar"></div>
-        <span class="name" id="user-name"></span>
-        <button class="signout" id="signout-btn">Sign out</button>
-      </div>
+      <button class="nav-cta" id="nav-cta" data-auth-trigger>Join Us</button>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -1090,12 +975,11 @@
 <section class="hero" id="home">
   <canvas id="network-canvas"></canvas>
   <div class="wrap hero-inner">
-    <img class="hero-logo" id="hero-logo" src="" alt="GBLU logo">
     <div class="hero-org" id="hero-org"></div>
     <h1>Connect. Lead. Build. <span class="accent">Grow.</span></h1>
     <p class="lead">GBLU is building a community where ambitious people connect, develop leadership, explore business and entrepreneurship, and create opportunities together.</p>
     <div class="hero-actions">
-      <button class="btn btn-primary" data-auth-trigger>JOIN GBLU</button>
+      <button class="btn btn-primary" data-auth-trigger>JOIN US</button>
       <a href="#about" class="btn btn-ghost">EXPLORE OUR VISION</a>
     </div>
     <div class="hero-pillars">
@@ -1316,7 +1200,7 @@
     <div class="eyebrow" style="color:var(--gold); justify-content:center;">Get Involved</div>
     <h2>Ready to Connect, Lead, Build and Grow?</h2>
     <p>Join the GBLU community and become part of a network built around leadership, business, entrepreneurship and connection.</p>
-    <button id="join-btn" class="btn btn-gold" data-auth-trigger>JOIN GBLU</button>
+    <button id="join-btn" class="btn btn-gold" data-auth-trigger>JOIN US</button>
   </div>
 </section>
 
@@ -1358,7 +1242,6 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img id="footer-logo" src="" alt="GBLU logo">
           <span class="short" id="footer-short"></span>
         </div>
         <p class="desc" id="footer-desc"></p>
@@ -1383,79 +1266,15 @@
   </div>
 </footer>
 
-<!-- ============ AUTH MODAL (Join / Sign In) ============ -->
-<div class="auth-overlay" id="auth-overlay" role="dialog" aria-modal="true" aria-label="Join or sign in to GBLU">
+<!-- ============ JOIN US MODAL ============ -->
+<div class="auth-overlay" id="auth-overlay" role="dialog" aria-modal="true" aria-label="Join GBLU on social media">
   <div class="auth-modal">
     <button class="auth-close" id="auth-close" aria-label="Close">&times;</button>
     <div class="auth-header">
-      <img id="auth-logo" src="" alt="GBLU logo">
-      <h3 id="auth-title">Welcome to GBLU</h3>
-      <p>Sign in or create your GBLU account</p>
+      <h3 id="auth-title">Join Us</h3>
+      <p>Connect with GBLU on your favorite platform</p>
     </div>
-
-    <div class="auth-tabs">
-      <button class="auth-tab active" id="tab-signin" type="button">Sign In</button>
-      <button class="auth-tab" id="tab-signup" type="button">Sign Up</button>
-    </div>
-
-    <div class="auth-error" id="auth-error"></div>
-    <div class="auth-note" id="auth-note">
-      GBLU accounts aren't connected yet. Once Firebase is set up in the site config, Join / Sign In will work here.
-    </div>
-
-    <!-- SIGN IN -->
-    <form class="auth-form active" id="form-signin">
-      <div class="field">
-        <label for="si-email">Email</label>
-        <input type="email" id="si-email" required autocomplete="email">
-      </div>
-      <div class="field">
-        <label for="si-password">Password</label>
-        <input type="password" id="si-password" required autocomplete="current-password">
-      </div>
-      <button type="submit" class="btn btn-primary auth-submit">SIGN IN</button>
-      <div class="auth-switch">New to GBLU? <button type="button" id="go-signup">Create an account</button></div>
-    </form>
-
-    <!-- SIGN UP -->
-    <form class="auth-form" id="form-signup">
-      <div class="field">
-        <label for="su-name">Full name</label>
-        <input type="text" id="su-name" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="su-role">I am a...</label>
-        <select id="su-role" required>
-          <option value="" disabled selected>Select one</option>
-          <option>Student</option>
-          <option>Young Professional</option>
-          <option>Entrepreneur</option>
-          <option>Business Leader</option>
-          <option>Mentor / Professional</option>
-          <option>Organization / Company</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="su-email">Email</label>
-        <input type="email" id="su-email" required autocomplete="email">
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="su-password">Password</label>
-          <input type="password" id="su-password" required minlength="6" autocomplete="new-password">
-        </div>
-        <div class="field">
-          <label for="su-confirm">Confirm</label>
-          <input type="password" id="su-confirm" required minlength="6" autocomplete="new-password">
-        </div>
-      </div>
-      <div class="field">
-        <label for="su-phone">Phone <span style="text-transform:none; font-weight:500;">(optional)</span></label>
-        <input type="tel" id="su-phone" autocomplete="tel">
-      </div>
-      <button type="submit" class="btn btn-primary auth-submit">CREATE ACCOUNT</button>
-      <div class="auth-switch">Already have an account? <button type="button" id="go-signin">Sign in</button></div>
-    </form>
+    <div class="join-links" id="join-links"></div>
   </div>
 </div>
 
@@ -1463,11 +1282,7 @@
 (function () {
   const C = window.GBLU_CONFIG;
 
-  // ---- Populate brand / logo ----
-  document.querySelectorAll('#brand-logo, #hero-logo, #footer-logo').forEach(el => {
-    el.src = C.logo;
-    el.alt = C.shortName + ' logo';
-  });
+  // ---- Populate brand text ----
   document.getElementById('brand-full').textContent = C.orgName;
   document.getElementById('brand-short').textContent = C.shortName;
   document.getElementById('footer-short').textContent = C.shortName;
@@ -1494,7 +1309,7 @@
   });
   const joinLinkMobile = document.createElement('button');
   joinLinkMobile.className = 'btn btn-gold';
-  joinLinkMobile.textContent = 'JOIN GBLU';
+  joinLinkMobile.textContent = 'JOIN US';
   joinLinkMobile.setAttribute('data-auth-trigger', '');
   joinLinkMobile.addEventListener('click', () => { closeMobile(); openAuthModal(); });
   mobileMenu.appendChild(joinLinkMobile);
@@ -1629,162 +1444,47 @@
   }
 
   // =========================================================
-  // AUTH: Firebase email/password sign up + sign in
-  // Recognizes members across devices - not localStorage.
+  // JOIN US: opens a modal linking out to GBLU's social platforms
   // =========================================================
   const overlay = document.getElementById('auth-overlay');
-  const errorBox = document.getElementById('auth-error');
-  const noteBox = document.getElementById('auth-note');
-  document.getElementById('auth-logo').src = C.logo;
 
-  const firebaseReady = !!(C.firebase && C.firebase.apiKey && C.firebase.projectId);
-  let auth = null, db = null;
+  const socialLabels = {
+    instagram: 'Instagram',
+    linkedin: 'LinkedIn',
+    facebook: 'Facebook',
+    telegram: 'Telegram'
+  };
 
-  if (firebaseReady) {
-    firebase.initializeApp(C.firebase);
-    auth = firebase.auth();
-    db = firebase.firestore();
-  } else {
-    noteBox.classList.add('show');
-  }
+  const joinLinks = document.getElementById('join-links');
+  Object.keys(C.social).forEach(key => {
+    const url = C.social[key];
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = 'join-link';
+    a.innerHTML = '<span class="icon-circle">' + icons[key] + '</span> ' + (socialLabels[key] || key);
+    joinLinks.appendChild(a);
+  });
 
   window.openAuthModal = function () {
     overlay.classList.add('open');
-    hideError();
     document.body.style.overflow = 'hidden';
   };
   function closeAuthModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
-    hideError();
   }
-  function showError(msg) { errorBox.textContent = msg; errorBox.classList.add('show'); }
-  function hideError() { errorBox.classList.remove('show'); }
 
   document.querySelectorAll('[data-auth-trigger]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (auth && auth.currentUser) {
-        // already signed in - just scroll to community instead of reopening modal
-        document.getElementById('community').scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
       openAuthModal();
     });
   });
   document.getElementById('auth-close').addEventListener('click', closeAuthModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAuthModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAuthModal(); });
-
-  const tabSignin = document.getElementById('tab-signin');
-  const tabSignup = document.getElementById('tab-signup');
-  const formSignin = document.getElementById('form-signin');
-  const formSignup = document.getElementById('form-signup');
-  const authTitle = document.getElementById('auth-title');
-
-  function showSignin() {
-    tabSignin.classList.add('active'); tabSignup.classList.remove('active');
-    formSignin.classList.add('active'); formSignup.classList.remove('active');
-    authTitle.textContent = 'Welcome back';
-    hideError();
-  }
-  function showSignup() {
-    tabSignup.classList.add('active'); tabSignin.classList.remove('active');
-    formSignup.classList.add('active'); formSignin.classList.remove('active');
-    authTitle.textContent = 'Join GBLU';
-    hideError();
-  }
-  tabSignin.addEventListener('click', showSignin);
-  tabSignup.addEventListener('click', showSignup);
-  document.getElementById('go-signup').addEventListener('click', showSignup);
-  document.getElementById('go-signin').addEventListener('click', showSignin);
-
-  function setLoading(form, loading) {
-    const btn = form.querySelector('.auth-submit');
-    btn.dataset.loading = loading ? 'true' : 'false';
-    btn.textContent = loading ? 'PLEASE WAIT…' : (form === formSignin ? 'SIGN IN' : 'CREATE ACCOUNT');
-  }
-
-  function friendlyAuthError(err) {
-    const map = {
-      'auth/email-already-in-use': 'An account with this email already exists. Try signing in instead.',
-      'auth/invalid-email': 'That email address looks invalid.',
-      'auth/weak-password': 'Password should be at least 6 characters.',
-      'auth/user-not-found': 'No account found with that email. Try creating one.',
-      'auth/wrong-password': 'Incorrect password. Please try again.',
-      'auth/invalid-credential': 'Incorrect email or password.',
-      'auth/too-many-requests': 'Too many attempts. Please wait a moment and try again.'
-    };
-    return map[err.code] || err.message || 'Something went wrong. Please try again.';
-  }
-
-  formSignin.addEventListener('submit', function (e) {
-    e.preventDefault();
-    hideError();
-    if (!firebaseReady) { showError('Sign in is not connected yet — add your Firebase config in the site settings.'); return; }
-    const email = document.getElementById('si-email').value.trim();
-    const password = document.getElementById('si-password').value;
-    setLoading(formSignin, true);
-    auth.signInWithEmailAndPassword(email, password)
-      .then(() => { setLoading(formSignin, false); closeAuthModal(); })
-      .catch(err => { setLoading(formSignin, false); showError(friendlyAuthError(err)); });
-  });
-
-  formSignup.addEventListener('submit', function (e) {
-    e.preventDefault();
-    hideError();
-    if (!firebaseReady) { showError('Sign up is not connected yet — add your Firebase config in the site settings.'); return; }
-    const name = document.getElementById('su-name').value.trim();
-    const role = document.getElementById('su-role').value;
-    const email = document.getElementById('su-email').value.trim();
-    const password = document.getElementById('su-password').value;
-    const confirm = document.getElementById('su-confirm').value;
-    const phone = document.getElementById('su-phone').value.trim();
-
-    if (password !== confirm) { showError('Passwords do not match.'); return; }
-    if (!role) { showError('Please select what best describes you.'); return; }
-
-    setLoading(formSignup, true);
-    auth.createUserWithEmailAndPassword(email, password)
-      .then(cred => {
-        return cred.user.updateProfile({ displayName: name }).then(() => {
-          return db.collection('members').doc(cred.user.uid).set({
-            name: name,
-            role: role,
-            email: email,
-            phone: phone || null,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
-          });
-        });
-      })
-      .then(() => { setLoading(formSignup, false); closeAuthModal(); })
-      .catch(err => { setLoading(formSignup, false); showError(friendlyAuthError(err)); });
-  });
-
-  document.getElementById('signout-btn').addEventListener('click', function () {
-    if (auth) auth.signOut();
-  });
-
-  // ---- Reflect signed-in state across every device on sign-in ----
-  const navCta = document.getElementById('nav-cta');
-  const userChip = document.getElementById('user-chip');
-  const userName = document.getElementById('user-name');
-  const userAvatar = document.getElementById('user-avatar');
-
-  if (firebaseReady) {
-    auth.onAuthStateChanged(function (user) {
-      if (user) {
-        const displayName = user.displayName || user.email.split('@')[0];
-        navCta.style.display = 'none';
-        userChip.style.display = 'flex';
-        userName.textContent = 'Hi, ' + displayName.split(' ')[0];
-        userAvatar.textContent = displayName.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
-      } else {
-        navCta.style.display = '';
-        userChip.style.display = 'none';
-      }
-    });
-  }
 })();
 </script>
 </body>

@@ -1096,14 +1096,14 @@
     <h2 class="section-title">What We're Building</h2>
     <p class="section-sub">GBLU is early-stage. These are the areas we're building toward — not claims of existing programs.</p>
     <div class="build-grid">
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Leadership Development</h4><p>Future workshops, discussions and leadership experiences.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Business Discussions</h4><p>Conversations about business, careers, industries and markets.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Entrepreneurship</h4><p>Startup discussions, innovation activities and idea development.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Networking</h4><p>Activities designed to help members build meaningful connections.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Mentorship</h4><p>Future opportunities to learn directly from experienced professionals.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Internship Connections</h4><p>Future partnerships and opportunities for practical experience.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Volunteer Projects</h4><p>Community projects where members can collaborate.</p></div>
-      <div class="build-card reveal"><span class="soon-badge">Soon</span><h4>Events & Conferences</h4><p>Future talks, workshops, competitions, networking events and conferences.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Leadership Development</h4><p>Future workshops, discussions and leadership experiences.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Business Discussions</h4><p>Conversations about business, careers, industries and markets.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Entrepreneurship</h4><p>Startup discussions, innovation activities and idea development.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Networking</h4><p>Activities designed to help members build meaningful connections.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Mentorship</h4><p>Future opportunities to learn directly from experienced professionals.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Internship Connections</h4><p>Future partnerships and opportunities for practical experience.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Volunteer Projects</h4><p>Community projects where members can collaborate.</p></div>
+      <div class="build-card reveal"><span class="soon-badge"></span><h4>Events & Conferences</h4><p>Future talks, workshops, competitions, networking events and conferences.</p></div>
     </div>
 
     <div style="margin-top:56px;" class="reveal">
@@ -1467,9 +1467,10 @@
     joinLinks.appendChild(a);
   });
 
+  const JOIN_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSemf9gAf259sqfnzN7QAgJ8NaJQkrDk4hPlwfZTaG3muNmVzg/viewform?usp=publish-editor';
+
   window.openAuthModal = function () {
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    window.open(JOIN_FORM_URL, '_blank', 'noopener,noreferrer');
   };
   function closeAuthModal() {
     overlay.classList.remove('open');

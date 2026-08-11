@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gbluglobal-debug.github.io/GBLU/sitemap.xml

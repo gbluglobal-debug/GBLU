@@ -20,6 +20,7 @@
      SOCIAL SHARE PREVIEW (Facebook, LinkedIn, WhatsApp, Telegram, X)
      ============================================================ -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="GBLU">
 <meta property="og:title" content="Global Business & Leadership Union | GBLU">
 <meta property="og:description" content="GBLU connects ambitious people through leadership, business, entrepreneurship and meaningful connections.">
 <meta property="og:image" content="https://gbluglobal-debug.github.io/GBLU/gblu-logo-full.png">
@@ -28,6 +29,40 @@
 <meta name="twitter:title" content="Global Business & Leadership Union | GBLU">
 <meta name="twitter:description" content="GBLU connects ambitious people through leadership, business, entrepreneurship and meaningful connections.">
 <meta name="twitter:image" content="https://gbluglobal-debug.github.io/GBLU/gblu-logo-full.png">
+
+<!-- ============================================================
+     STRUCTURED DATA (JSON-LD)
+     Tells Google explicitly who GBLU is, its name, logo and
+     social profiles. Helps fix "GitHub Pages documentation"
+     showing instead of "GBLU" in search results, and reinforces
+     brand identity for the favicon/logo Google chooses to show.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GBLU",
+  "alternateName": "Global Business & Leadership Union",
+  "url": "https://gbluglobal-debug.github.io/GBLU/",
+  "logo": "https://gbluglobal-debug.github.io/GBLU/logo.png",
+  "description": "Global Business & Leadership Union (GBLU) connects ambitious people through leadership, business, entrepreneurship and meaningful connections.",
+  "sameAs": [
+    "https://www.instagram.com/global_business_and_leadership/",
+    "https://www.linkedin.com/company/gblu-global/",
+    "https://web.facebook.com/profile.php?id=61592775405959",
+    "https://t.me/+Gxbru4C940NkM2E0"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GBLU",
+  "alternateName": "Global Business & Leadership Union",
+  "url": "https://gbluglobal-debug.github.io/GBLU/"
+}
+</script>
 
 <!-- ============================================================
      GBLU SITE CONFIG
@@ -977,12 +1012,19 @@
     <a href="#home" class="brand">
       <img src="logo.png" alt="GBLU logo">
       <span class="brand-text">
-        <span class="full" id="brand-full"></span>
-        <span class="short" id="brand-short"></span>
+        <span class="full" id="brand-full">Global Business &amp; Leadership Union</span>
+        <span class="short" id="brand-short">GBLU</span>
       </span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
-      <ul id="nav-list"></ul>
+      <ul id="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pillars">Pillars</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#partnerships">Partnerships</a></li>
+      </ul>
     </nav>
     <div class="nav-cta-wrap">
       <button class="nav-cta" id="nav-cta" data-auth-trigger>Join Us</button>
@@ -1000,7 +1042,7 @@
   <canvas id="network-canvas"></canvas>
   <div class="wrap hero-inner">
     <img class="hero-logo" src="logo.png" alt="GBLU logo">
-    <div class="hero-org" id="hero-org"></div>
+    <div class="hero-org" id="hero-org">Global Business &amp; Leadership Union</div>
     <h1>Connect. Lead. Build. <span class="accent">Grow.</span></h1>
     <p class="lead">GBLU is building a community where ambitious people connect, develop leadership, explore business and entrepreneurship, and create opportunities together.</p>
     <div class="hero-actions">
@@ -1209,11 +1251,11 @@
     <div class="eyebrow">Leadership</div>
     <h2 class="section-title" style="margin-bottom:36px;">Founder & CEO</h2>
     <div class="founder-wrap reveal">
-      <div class="founder-avatar" id="founder-initials"></div>
+      <div class="founder-avatar" id="founder-initials">DT</div>
       <div>
-        <div class="founder-role" id="founder-role"></div>
-        <h3 id="founder-name"></h3>
-        <p id="founder-bio"></p>
+        <div class="founder-role" id="founder-role">Founder &amp; CEO</div>
+        <h3 id="founder-name">Dagmawi Tadesse</h3>
+        <p id="founder-bio">Founder and CEO of Global Business &amp; Leadership Union (GBLU), focused on building a community around leadership, business, entrepreneurship and meaningful connections.</p>
       </div>
     </div>
   </div>
@@ -1236,17 +1278,17 @@
       <div class="reveal">
         <div class="eyebrow">Contact</div>
         <h2 class="section-title">Get in Touch</h2>
-        <a class="contact-email" id="contact-email" href="#">gblu.global@gmail.com</a>
+        <a class="contact-email" id="contact-email" href="mailto:gblu.global@gmail.com">gblu.global@gmail.com</a>
         <div class="social-row" id="social-row"></div>
       </div>
       <div class="contact-card reveal">
         <div class="row">
           <label>Organization</label>
-          <div class="value" id="cc-org"></div>
+          <div class="value" id="cc-org">GBLU — Global Business &amp; Leadership Union</div>
         </div>
         <div class="row">
           <label>Email</label>
-          <div class="value" id="cc-email"></div>
+          <div class="value" id="cc-email">gblu.global@gmail.com</div>
         </div>
         <div class="row">
           <label>Based in</label>
@@ -1254,7 +1296,7 @@
         </div>
         <div class="row">
           <label>Focus</label>
-          <div class="value" id="cc-pillars"></div>
+          <div class="value" id="cc-pillars">Leadership • Business • Entrepreneurship • Connection</div>
         </div>
       </div>
     </div>
@@ -1268,25 +1310,33 @@
       <div>
         <div class="footer-brand">
           <img src="logo.png" alt="GBLU logo">
-          <span class="short" id="footer-short"></span>
+          <span class="short" id="footer-short">GBLU</span>
         </div>
-        <p class="desc" id="footer-desc"></p>
-        <p class="slogan" id="footer-slogan"></p>
+        <p class="desc" id="footer-desc">Global Business &amp; Leadership Union — Leadership • Business • Entrepreneurship • Connection</p>
+        <p class="slogan" id="footer-slogan">Connect. Lead. Build. Grow.</p>
       </div>
       <div>
         <h5>Navigate</h5>
-        <ul id="footer-nav"></ul>
+        <ul id="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pillars">Pillars</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#partnerships">Partnerships</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
       <div>
         <h5>Contact</h5>
         <ul>
-          <li><a href="#" id="footer-email"></a></li>
+          <li><a href="mailto:gblu.global@gmail.com" id="footer-email">gblu.global@gmail.com</a></li>
           <li><a href="#join">Join GBLU</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span id="footer-copy"></span>
+      <span id="footer-copy">© 2026 Global Business &amp; Leadership Union. All rights reserved.</span>
       <div class="footer-social" id="footer-social"></div>
     </div>
   </div>
@@ -1319,6 +1369,7 @@
 
   // ---- Nav ----
   const navList = document.getElementById('nav-list');
+  navList.innerHTML = '';
   C.nav.forEach(item => {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -1341,6 +1392,7 @@
   mobileMenu.appendChild(joinLinkMobile);
 
   const footerNav = document.getElementById('footer-nav');
+  footerNav.innerHTML = '';
   C.nav.concat([{label:'Contact', href:'#contact'}]).forEach(item => {
     const li = document.createElement('li');
     const a = document.createElement('a');

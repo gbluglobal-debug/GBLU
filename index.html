@@ -79,7 +79,17 @@
     founder: {
       name: "Dagmawi Tadesse",
       title: "Founder & CEO",
-      bio: "Founder and CEO of Global Business & Leadership Union (GBLU), focused on building a community around leadership, business, entrepreneurship and meaningful connections."
+      photo: "founder-dagmawi-tadesse.jpg",
+      linkedin: "https://www.linkedin.com/in/dagmawitadesse",
+      bio: "Dagmawi Tadesse is the Founder and CEO of the Global Business & Leadership Union (GBLU), where he leads the organization's vision of connecting ambitious young people through leadership, business, entrepreneurship and meaningful relationships. He is a business student at Addis Ababa University's College of Business and Economics, and lives by his personal growth framework, \"PMFS Life\" — Physical, Mental, Financial and Spiritual development.",
+      achievements: [
+        "Founder & CEO of GBLU — Global Business & Leadership Union",
+        "Business student, Addis Ababa University, College of Business and Economics",
+        "Creator of the PMFS Life framework (Physical, Mental, Financial, Spiritual growth)",
+        "Building a personal brand and content platform, XIN Store & PMFS Life",
+        "Host of Dagi Tad Vlogs, a YouTube channel on student life and entrepreneurship",
+        "Active applicant and participant in international youth leadership programs"
+      ]
     },
     social: {
       instagram: "https://www.instagram.com/global_business_and_leadership/",
@@ -93,6 +103,7 @@
       { label: "About", href: "#about" },
       { label: "Pillars", href: "#pillars" },
       { label: "Programs", href: "#programs" },
+      { label: "Ambassador", href: "#ambassador" },
       { label: "Community", href: "#community" },
       { label: "Partnerships", href: "#partnerships" }
     ]
@@ -772,6 +783,12 @@
     font-weight: 800;
     border: 4px solid var(--white);
     box-shadow: 0 12px 30px rgba(11,31,58,0.18);
+    overflow: hidden;
+  }
+  .founder-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .founder-role {
     font-size: 13px;
@@ -781,8 +798,98 @@
     color: var(--blue);
     margin-bottom: 8px;
   }
-  .founder-wrap h3 { font-size: 26px; margin-bottom: 14px; }
+  .founder-wrap h3 { font-size: 26px; margin-bottom: 6px; }
   .founder-wrap p { color: var(--text-muted); font-size: 16px; max-width: 560px; }
+  .founder-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue);
+    border: 1px solid var(--border);
+    background: var(--white);
+    padding: 7px 14px 7px 12px;
+    border-radius: 999px;
+  }
+  .founder-linkedin:hover { background: var(--blue); color: var(--white); }
+  .founder-linkedin svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .founder-achievements {
+    margin-top: 22px;
+    display: grid;
+    gap: 10px;
+    max-width: 620px;
+  }
+  .founder-achievements li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14.5px;
+    color: var(--text);
+  }
+  .founder-achievements li::before {
+    content: "★";
+    color: var(--gold);
+    font-size: 13px;
+    line-height: 1.6;
+    flex-shrink: 0;
+  }
+
+  /* ---------- AMBASSADOR ---------- */
+  .ambassador-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0c2b52 100%);
+    border-radius: var(--radius);
+    padding: 56px 48px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 32px;
+  }
+  .ambassador-hero h3 { color: var(--white); font-size: 26px; margin-bottom: 10px; }
+  .ambassador-hero p.tag { color: var(--gold); font-weight: 700; letter-spacing: 0.03em; margin-bottom: 16px; }
+  .ambassador-hero p.desc { font-size: 16px; max-width: 780px; margin-bottom: 10px; }
+  .amb-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .amb-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px;
+  }
+  .amb-card h4 {
+    font-size: 15px;
+    color: var(--navy);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .amb-card ul { display: grid; gap: 10px; }
+  .amb-card li {
+    font-size: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .amb-card li::before {
+    content: "•";
+    color: var(--blue);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .amb-cert-box {
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    padding: 40px 44px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .amb-cert-box h4 { font-size: 19px; color: var(--navy); margin-bottom: 10px; }
+  .amb-cert-box p { color: var(--text-muted); font-size: 15px; max-width: 680px; margin: 0 auto; }
 
   /* ---------- JOIN ---------- */
   .join-section {
@@ -910,7 +1017,9 @@
     .stat-strip { grid-template-columns: repeat(2, 1fr); }
     .founder-wrap { grid-template-columns: 1fr; text-align: center; padding: 40px 28px; }
     .founder-wrap p { margin: 0 auto; }
+    .founder-achievements { margin-left: auto; margin-right: auto; text-align: left; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
+    .amb-grid { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 620px) {
@@ -924,6 +1033,10 @@
     .events-box { padding: 40px 22px; }
     .footer-grid { grid-template-columns: 1fr; gap: 34px; }
     .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .amb-grid { grid-template-columns: 1fr; }
+    .ambassador-hero { padding: 36px 26px; }
+    .amb-cert-box { padding: 32px 24px; }
+    section#ambassador .wrap > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -1193,6 +1306,87 @@
   </div>
 </section>
 
+<!-- ============ AMBASSADOR PROGRAM ============ -->
+<section class="section-pad" id="ambassador">
+  <div class="wrap">
+    <div class="eyebrow">🌍 GBLU Ambassador Program</div>
+    <h2 class="section-title">Represent. Connect. Lead. Grow.</h2>
+    <p class="section-sub">The GBLU Ambassador Program recognizes and empowers our most active, committed and engaged members to represent the Global Business &amp; Leadership Union (GBLU) within their universities, communities, countries and professional networks. 🌎🤝</p>
+
+    <div class="ambassador-hero reveal">
+      <p class="tag">🌟 Take on a leadership role</p>
+      <p class="desc">Selected participants have the opportunity to take on a leadership role within the GBLU community, contribute to our growth, connect with people from different backgrounds, and help create meaningful opportunities for young people around the world. 🌍💡</p>
+    </div>
+
+    <h3 style="font-size:20px; color:var(--navy); margin-bottom:18px;">🌟 What Do GBLU Ambassadors Do?</h3>
+    <p style="color:var(--text-muted); font-size:15.5px; margin-bottom:22px; max-width:780px;">GBLU Ambassadors help us connect, lead, build and grow by:</p>
+    <div class="amb-grid reveal">
+      <div class="amb-card">
+        <h4>🌍 Represent &amp; Promote</h4>
+        <ul>
+          <li>Representing GBLU within their communities and networks</li>
+          <li>Promoting GBLU programs, events and opportunities</li>
+          <li>Sharing GBLU activities and opportunities through their networks</li>
+        </ul>
+      </div>
+      <div class="amb-card">
+        <h4>🤝 Connect &amp; Build</h4>
+        <ul>
+          <li>Welcoming and connecting new members</li>
+          <li>Building connections with universities, student organizations and communities</li>
+          <li>Helping expand GBLU's international network</li>
+        </ul>
+      </div>
+      <div class="amb-card">
+        <h4>🚀 Lead &amp; Contribute</h4>
+        <ul>
+          <li>Supporting leadership, business and entrepreneurship initiatives</li>
+          <li>Contributing ideas and supporting GBLU projects</li>
+          <li>Encouraging other members to actively participate and contribute</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px;" class="reveal">
+      <div>
+        <h3 style="font-size:20px; color:var(--navy); margin-bottom:14px;">🏆 How Are Ambassadors Selected?</h3>
+        <p style="color:var(--text-muted); font-size:15px; margin-bottom:14px;">GBLU Ambassadors are selected from active participants within the GBLU community. Selection may consider:</p>
+        <ul class="founder-achievements">
+          <li>⭐ Consistent participation and engagement</li>
+          <li>⭐ Leadership and initiative</li>
+          <li>⭐ Contributions to GBLU activities</li>
+          <li>⭐ Communication and networking skills</li>
+          <li>⭐ Reliability and professionalism</li>
+          <li>⭐ Commitment to GBLU's mission and values</li>
+          <li>⭐ Ability to positively represent GBLU</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:20px; color:var(--navy); margin-bottom:14px;">💎 Why Become a GBLU Ambassador?</h3>
+        <p style="color:var(--text-muted); font-size:15px; margin-bottom:14px;">Being a GBLU Ambassador is more than a title — it's an opportunity to grow, lead, connect and make an impact. 🚀 Ambassadors can gain opportunities to:</p>
+        <ul class="founder-achievements">
+          <li>🌍 Expand their international network</li>
+          <li>👑 Develop leadership and professional experience</li>
+          <li>🗣️ Strengthen communication and networking skills</li>
+          <li>💡 Contribute ideas and participate in GBLU initiatives</li>
+          <li>✨ Strengthen their professional profile and personal brand</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="amb-cert-box reveal">
+      <h4>🎓 Ambassador Certificate</h4>
+      <p>One of the special opportunities of becoming a GBLU Ambassador is receiving an official GBLU Ambassador Certificate recognizing your contribution and role within the organization. 📜🏆 The certificate can serve as a valuable addition to your CV, LinkedIn profile, portfolio, scholarship applications, internship applications and future professional opportunities. 💼🎓🌟</p>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;" class="reveal">
+      <p style="font-size:17px; color:var(--navy); font-weight:700; margin-bottom:6px;">🌟 Get involved. Stand out. Lead. Represent. Make an impact.</p>
+      <p style="color:var(--text-muted); font-size:15px; margin-bottom:24px;">Your journey with GBLU could be the beginning of something bigger. 🌎💙</p>
+      <button class="btn btn-primary" data-auth-trigger>BECOME AN AMBASSADOR</button>
+    </div>
+  </div>
+</section>
+
 <!-- ============ COMMUNITY ============ -->
 <section class="section-pad bg-light" id="community">
   <div class="wrap">
@@ -1246,16 +1440,21 @@
 </section>
 
 <!-- ============ FOUNDER ============ -->
-<section class="section-pad bg-light">
+<section class="section-pad bg-light" id="founder">
   <div class="wrap">
     <div class="eyebrow">Leadership</div>
     <h2 class="section-title" style="margin-bottom:36px;">Founder & CEO</h2>
     <div class="founder-wrap reveal">
-      <div class="founder-avatar" id="founder-initials">DT</div>
+      <div class="founder-avatar" id="founder-avatar"></div>
       <div>
         <div class="founder-role" id="founder-role">Founder &amp; CEO</div>
         <h3 id="founder-name">Dagmawi Tadesse</h3>
+        <a class="founder-linkedin" id="founder-linkedin" href="https://www.linkedin.com/in/dagmawitadesse" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          linkedin.com/in/dagmawitadesse
+        </a>
         <p id="founder-bio">Founder and CEO of Global Business &amp; Leadership Union (GBLU), focused on building a community around leadership, business, entrepreneurship and meaningful connections.</p>
+        <ul class="founder-achievements" id="founder-achievements"></ul>
       </div>
     </div>
   </div>
@@ -1404,7 +1603,27 @@
   document.getElementById('founder-role').textContent = C.founder.title;
   document.getElementById('founder-name').textContent = C.founder.name;
   document.getElementById('founder-bio').textContent = C.founder.bio;
-  document.getElementById('founder-initials').textContent = C.founder.name.split(' ').map(w=>w[0]).slice(0,2).join('');
+  const founderAvatar = document.getElementById('founder-avatar');
+  if (C.founder.photo) {
+    const img = document.createElement('img');
+    img.src = C.founder.photo;
+    img.alt = C.founder.name;
+    founderAvatar.appendChild(img);
+  } else {
+    founderAvatar.textContent = C.founder.name.split(' ').map(w=>w[0]).slice(0,2).join('');
+  }
+  const founderLinkedin = document.getElementById('founder-linkedin');
+  if (C.founder.linkedin) {
+    founderLinkedin.href = C.founder.linkedin;
+  }
+  const founderAchievements = document.getElementById('founder-achievements');
+  if (C.founder.achievements && founderAchievements) {
+    C.founder.achievements.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      founderAchievements.appendChild(li);
+    });
+  }
 
   // ---- Contact ----
   document.getElementById('contact-email').textContent = C.email;

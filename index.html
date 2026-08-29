@@ -113,10 +113,10 @@
       photo: "founder-dagmawi-tadesse.jpg",
       linkedin: "https://www.linkedin.com/in/dagmawitadesse",
       linkedinLabel: "linkedin.com/in/dagmawitadesse",
-      bio: "Dagmawi Tadesse is the Founder and CEO of the Global Business & Leadership Union (GBLU), where he leads the organization's vision of connecting ambitious young people through leadership, business, entrepreneurship and meaningful relationships. He is a business student at Addis Ababa University's College of Business and Economics.",
+      bio: "Dagmawi Tadesse is the Founder and CEO of the Global Business & Leadership Union (GBLU), where he leads the organization's vision of connecting ambitious young people through leadership, business, entrepreneurship and meaningful relationships. He is a Student at Addis Ababa University, Business student.",
       achievements: [
         "Founder & CEO of GBLU — Global Business & Leadership Union",
-        "Business student, Addis Ababa University, College of Business and Economics",
+        "Student at Addis Ababa University, Business student",
         "Creator of the PMFS Life framework (Physical, Mental, Financial, Spiritual growth)",
         "Building a personal brand and content platform, XIN Store & PMFS Life",
         "Host of Dagi Tad Vlogs, a YouTube channel on student life and entrepreneurship",
@@ -153,9 +153,9 @@
     --blue-soft: #2f74ff;
     --gold: #F5B942;
     --white: #FFFFFF;
-    --bg-light: #F5F7FA;
-    --text: #172033;
-    --text-muted: #4b5568;
+    --bg-light: #12294d;
+    --text: rgba(255,255,255,0.92);
+    --text-muted: rgba(255,255,255,0.62);
     --border: #e3e7ee;
     --radius: 14px;
     --max: 1180px;
@@ -168,7 +168,7 @@
   body {
     font-family: var(--font);
     color: var(--text);
-    background: var(--white);
+    background: var(--navy);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -207,7 +207,7 @@
   h1, h2, h3, h4 {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--navy);
+    color: var(--white);
   }
 
   .section-title {
@@ -525,7 +525,7 @@
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    background: var(--white);
+    background: rgba(255,255,255,0.05);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 18px;
@@ -547,7 +547,7 @@
     gap: 22px;
   }
   .pillar-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.05);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 32px 26px;
@@ -582,7 +582,7 @@
   .pillar-card .tag {
     font-size: 15px;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--white);
     margin-bottom: 10px;
     display: block;
   }
@@ -626,15 +626,15 @@
     border: 1px solid transparent;
     transition: border-color 0.2s ease, background 0.2s ease;
   }
-  .who-card:hover { border-color: var(--gold); background: var(--white); }
-  .who-card h4 { font-size: 16.5px; margin-bottom: 8px; color: var(--navy); }
+  .who-card:hover { border-color: var(--gold); background: rgba(255,255,255,0.09); }
+  .who-card h4 { font-size: 16.5px; margin-bottom: 8px; color: var(--white); }
   .who-card p { font-size: 14px; color: var(--text-muted); }
   .who-note {
     margin-top: 32px;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
-    color: var(--navy);
+    color: var(--white);
     background: rgba(21,94,239,0.06);
     border: 1px dashed rgba(21,94,239,0.3);
     border-radius: 12px;
@@ -648,13 +648,13 @@
     gap: 18px;
   }
   .build-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.05);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 22px;
     position: relative;
   }
-  .build-card h4 { font-size: 15.5px; margin-bottom: 8px; color: var(--navy); }
+  .build-card h4 { font-size: 15.5px; margin-bottom: 8px; color: var(--white); }
   .build-card p { font-size: 13.5px; color: var(--text-muted); }
   .soon-badge {
     position: absolute;
@@ -725,7 +725,7 @@
   .journey-step .label {
     font-size: 13.5px;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--white);
     letter-spacing: 0.02em;
   }
   .journey-line {
@@ -889,14 +889,14 @@
     margin-bottom: 32px;
   }
   .amb-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.05);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 26px;
   }
   .amb-card h4 {
     font-size: 15px;
-    color: var(--navy);
+    color: var(--white);
     margin-bottom: 14px;
     display: flex;
     align-items: center;
@@ -923,7 +923,7 @@
     text-align: center;
     margin-bottom: 8px;
   }
-  .amb-cert-box h4 { font-size: 19px; color: var(--navy); margin-bottom: 10px; }
+  .amb-cert-box h4 { font-size: 19px; color: var(--white); margin-bottom: 10px; }
   .amb-cert-box p { color: var(--text-muted); font-size: 15px; max-width: 680px; margin: 0 auto; }
 
   /* ---------- JOIN ---------- */
@@ -958,14 +958,14 @@
     gap: 12px;
     font-size: 20px;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--white);
     margin: 18px 0 30px;
   }
   .social-row { display: flex; gap: 14px; }
   .social-icon {
     width: 48px; height: 48px;
     border-radius: 50%;
-    background: var(--bg-light);
+    background: #F5F7FA;
     display: flex; align-items: center; justify-content: center;
     color: var(--navy);
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -988,7 +988,7 @@
   }
   .contact-card .row { margin-bottom: 22px; }
   .contact-card .row:last-child { margin-bottom: 0; }
-  .contact-card .value { font-size: 16px; font-weight: 600; color: var(--navy); }
+  .contact-card .value { font-size: 16px; font-weight: 600; color: var(--white); }
 
   /* ---------- FOOTER ---------- */
   footer {
@@ -1114,7 +1114,7 @@
     width: 34px; height: 34px;
     border-radius: 50%;
     border: none;
-    background: var(--bg-light);
+    background: #F5F7FA;
     color: var(--navy);
     font-size: 18px;
     cursor: pointer;
@@ -1122,8 +1122,8 @@
   }
   .auth-close:hover { background: var(--border); }
   .auth-header { text-align: center; margin-bottom: 22px; }
-  .auth-header h3 { font-size: 21px; margin-bottom: 4px; }
-  .auth-header p { font-size: 13.5px; color: var(--text-muted); }
+  .auth-header h3 { font-size: 21px; margin-bottom: 4px; color: var(--navy); }
+  .auth-header p { font-size: 13.5px; color: #4b5568; }
 
   /* ---------- JOIN LINKS ---------- */
   .join-links { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
@@ -1134,7 +1134,7 @@
     padding: 15px 18px;
     border-radius: 12px;
     border: 1.5px solid var(--border);
-    background: var(--bg-light);
+    background: #F5F7FA;
     color: var(--navy);
     font-weight: 700;
     font-size: 15px;
@@ -1148,6 +1148,37 @@
     color: var(--gold);
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
+  }
+
+  /* ---------- CUSTOM RIGHT-CLICK MENU ---------- */
+  .custom-ctx-menu {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    min-width: 200px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.28), 0 0 0 1px rgba(0,0,0,0.06);
+    padding: 6px 0;
+    font-family: var(--font);
+  }
+  .custom-ctx-menu.open { display: block; }
+  .custom-ctx-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 9px 16px;
+    font-size: 13.5px;
+    color: #1f1f1f;
+    cursor: pointer;
+  }
+  .custom-ctx-menu button:hover { background: #f1f3f4; }
+  .custom-ctx-menu hr {
+    border: none;
+    border-top: 1px solid #e3e3e3;
+    margin: 6px 0;
   }
 
 </style>
@@ -1356,7 +1387,7 @@
       <p class="desc">Selected participants have the opportunity to take on a leadership role within the GBLU community, contribute to our growth, connect with people from different backgrounds, and help create meaningful opportunities for young people around the world. 🌍💡</p>
     </div>
 
-    <h3 style="font-size:20px; color:var(--navy); margin-bottom:18px;">🌟 What Do GBLU Ambassadors Do?</h3>
+    <h3 style="font-size:20px; color:var(--white); margin-bottom:18px;">🌟 What Do GBLU Ambassadors Do?</h3>
     <p style="color:var(--text-muted); font-size:15.5px; margin-bottom:22px; max-width:780px;">GBLU Ambassadors help us connect, lead, build and grow by:</p>
     <div class="amb-grid reveal">
       <div class="amb-card">
@@ -1387,7 +1418,7 @@
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px;" class="reveal">
       <div>
-        <h3 style="font-size:20px; color:var(--navy); margin-bottom:14px;">🏆 How Are Ambassadors Selected?</h3>
+        <h3 style="font-size:20px; color:var(--white); margin-bottom:14px;">🏆 How Are Ambassadors Selected?</h3>
         <p style="color:var(--text-muted); font-size:15px; margin-bottom:14px;">GBLU Ambassadors are selected from active participants within the GBLU community. Selection may consider:</p>
         <ul class="founder-achievements">
           <li>⭐ Consistent participation and engagement</li>
@@ -1400,7 +1431,7 @@
         </ul>
       </div>
       <div>
-        <h3 style="font-size:20px; color:var(--navy); margin-bottom:14px;">💎 Why Become a GBLU Ambassador?</h3>
+        <h3 style="font-size:20px; color:var(--white); margin-bottom:14px;">💎 Why Become a GBLU Ambassador?</h3>
         <p style="color:var(--text-muted); font-size:15px; margin-bottom:14px;">Being a GBLU Ambassador is more than a title — it's an opportunity to grow, lead, connect and make an impact. 🚀 Ambassadors can gain opportunities to:</p>
         <ul class="founder-achievements">
           <li>🌍 Expand their international network</li>
@@ -1418,14 +1449,14 @@
     </div>
 
     <div style="text-align:center; margin-top:40px;" class="reveal">
-      <p style="font-size:17px; color:var(--navy); font-weight:700; margin-bottom:6px;">🌟 Get involved. Stand out. Lead. Represent. Make an impact.</p>
+      <p style="font-size:17px; color:var(--white); font-weight:700; margin-bottom:6px;">🌟 Get involved. Stand out. Lead. Represent. Make an impact.</p>
       <p style="color:var(--text-muted); font-size:15px; margin-bottom:20px;">Your journey with GBLU could be the beginning of something bigger. 🌎💙</p>
       <div class="chip-row" style="justify-content:center; margin-bottom:26px;">
-        <span class="chip" style="color:var(--navy); border-color:var(--border);">Join</span>
-        <span class="chip" style="color:var(--navy); border-color:var(--border);">Participate actively</span>
-        <span class="chip" style="color:var(--navy); border-color:var(--border);">Contribute</span>
-        <span class="chip" style="color:var(--navy); border-color:var(--border);">Demonstrate leadership</span>
-        <span class="chip" style="color:var(--navy); border-color:var(--border);">Be considered for Ambassador selection</span>
+        <span class="chip" style="color:var(--white); border-color:var(--border);">Join</span>
+        <span class="chip" style="color:var(--white); border-color:var(--border);">Participate actively</span>
+        <span class="chip" style="color:var(--white); border-color:var(--border);">Contribute</span>
+        <span class="chip" style="color:var(--white); border-color:var(--border);">Demonstrate leadership</span>
+        <span class="chip" style="color:var(--white); border-color:var(--border);">Be considered for Ambassador selection</span>
       </div>
       <a href="#join" class="btn btn-primary" data-auth-trigger>JOIN GBLU</a>
     </div>
@@ -1602,6 +1633,14 @@
     </div>
     <div class="join-links" id="join-links"></div>
   </div>
+</div>
+
+<!-- ============ CUSTOM RIGHT-CLICK MENU ============ -->
+<div class="custom-ctx-menu" id="custom-ctx-menu">
+  <button id="ctx-save-image">Save image as...</button>
+  <button id="ctx-copy-image">Copy image</button>
+  <hr>
+  <button id="ctx-inspect">Inspect</button>
 </div>
 
 <script>
@@ -1839,6 +1878,52 @@
   document.getElementById('auth-close').addEventListener('click', closeAuthModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAuthModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAuthModal(); });
+
+  // =========================================================
+  // CUSTOM RIGHT-CLICK MENU
+  // Replaces the browser's full context menu on right-click.
+  // Note: "Inspect" is shown for visual match only — a webpage
+  // cannot open the browser's DevTools via script, so that item
+  // is not wired to any action.
+  // =========================================================
+  const ctxMenu = document.getElementById('custom-ctx-menu');
+  const LOGO_URL = 'logo.png';
+
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    const menuWidth = 220, menuHeight = 130;
+    let x = e.clientX, y = e.clientY;
+    if (x + menuWidth > window.innerWidth) x = window.innerWidth - menuWidth - 8;
+    if (y + menuHeight > window.innerHeight) y = window.innerHeight - menuHeight - 8;
+    ctxMenu.style.left = x + 'px';
+    ctxMenu.style.top = y + 'px';
+    ctxMenu.classList.add('open');
+  });
+
+  document.addEventListener('click', () => ctxMenu.classList.remove('open'));
+  window.addEventListener('scroll', () => ctxMenu.classList.remove('open'), true);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') ctxMenu.classList.remove('open'); });
+
+  document.getElementById('ctx-save-image').addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = LOGO_URL;
+    a.download = 'gblu-logo.png';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+
+  document.getElementById('ctx-copy-image').addEventListener('click', async () => {
+    try {
+      const response = await fetch(LOGO_URL);
+      const blob = await response.blob();
+      await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+    } catch (err) {
+      console.error('Copy image failed:', err);
+    }
+  });
+
+  // "Inspect" intentionally left without a handler — see note above.
 })();
 </script>
 </body>

@@ -1208,6 +1208,8 @@
       </ul>
     </nav>
     <div class="nav-cta-wrap">
+      <a class="nav-cta" href="https://gbluglobal-debug.github.io/GBLU-courses/" target="_blank" rel="noopener"
+         style="color:var(--gold); font-weight:800; font-size:1.05em; text-decoration:none; margin-right:10px; white-space:nowrap;">GBLU COURSES</a>
       <button class="nav-cta" id="nav-cta" data-auth-trigger>Join Us</button>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -1679,6 +1681,17 @@
   joinLinkMobile.setAttribute('data-auth-trigger', '');
   joinLinkMobile.addEventListener('click', () => { closeMobile(); openAuthModal(); });
   mobileMenu.appendChild(joinLinkMobile);
+
+  const coursesLinkMobile = document.createElement('a');
+  coursesLinkMobile.href = 'https://gbluglobal-debug.github.io/GBLU-courses/';
+  coursesLinkMobile.target = '_blank';
+  coursesLinkMobile.rel = 'noopener';
+  coursesLinkMobile.textContent = 'GBLU COURSES';
+  coursesLinkMobile.style.color = 'var(--gold)';
+  coursesLinkMobile.style.fontWeight = '800';
+  coursesLinkMobile.style.fontSize = '1.05em';
+  coursesLinkMobile.addEventListener('click', closeMobile);
+  mobileMenu.appendChild(coursesLinkMobile);
 
   const footerNav = document.getElementById('footer-nav');
   footerNav.innerHTML = '';

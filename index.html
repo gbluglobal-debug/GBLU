@@ -370,6 +370,8 @@
     padding: 110px 32px 40px;
     flex-direction: column;
     gap: 6px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -1227,9 +1229,10 @@
     <img class="hero-logo" src="logo.png" alt="GBLU logo">
     <div class="hero-org" id="hero-org">Global Business &amp; Leadership Union</div>
     <h1>Connect. Lead. Build. <span class="accent">Grow.</span></h1>
-    <p class="lead">GBLU is a growing youth-led community of 130+ members connecting ambitious people through leadership, business, entrepreneurship and connection — with active teams, an Ambassador Program, and GBLU Courses, our biggest educational initiative to date.</p>
+    <p class="lead">GBLU is a growing youth-led community of 130+ members connecting ambitious people through leadership, business, entrepreneurship and connection — with active teams, an Ambassador Program, and <a href="https://gbluglobal-debug.github.io/GBLU-courses/" target="_blank" rel="noopener" style="color:var(--gold); font-weight:700; text-decoration:underline;">GBLU Courses</a>, our biggest educational initiative to date.</p>
     <div class="hero-actions">
       <button class="btn btn-primary" data-auth-trigger>JOIN GBLU</button>
+      <a href="https://gbluglobal-debug.github.io/GBLU-courses/" target="_blank" rel="noopener" class="btn btn-gold">EXPLORE GBLU COURSES</a>
       <a href="#about" class="btn btn-ghost">EXPLORE OUR VISION</a>
       <a href="#partnerships" class="btn btn-ghost">BECOME A PARTNER</a>
     </div>
@@ -1766,7 +1769,7 @@
   coursesLinkMobile.style.fontWeight = '800';
   coursesLinkMobile.style.fontSize = '1.05em';
   coursesLinkMobile.addEventListener('click', closeMobile);
-  mobileMenu.appendChild(coursesLinkMobile);
+  mobileMenu.insertBefore(coursesLinkMobile, mobileMenu.firstChild);
 
   const footerNav = document.getElementById('footer-nav');
   footerNav.innerHTML = '';
